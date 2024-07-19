@@ -1,0 +1,70 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.Components.Web
+@namespace TafadzwaPortfolio.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="~/" />
+   @*  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="TafadzwaPortfolio.styles.css" rel="stylesheet" /> *@
+
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <title>Tafadzwa Kahwai | Full-Stack Developer</title>
+    <meta name="description"
+          content="A skilled software developer with over 3 years of experience in designing and developing innovative solutions using a range of Microsoft technologies. Proficient in agile development methodology, with a proven track record of building successful desktop and web-based applications." />
+    <meta name="author" content="Tafadzwa Kahwai" />
+    <meta name="google-site-verification"
+          content="wX2xdkxqjrC4rA2EM-9bbaVpiEEFG8ae5azgeZDd-oo" />
+
+    <meta property="og:title"
+          content="Tafadzwa Kahwai | Full-Stack Developer" />
+    <meta property="og:site_name" content="Tafadzwa Kahwai Portfolio Website" />
+    <meta property="og:url" content="index" />
+    <meta property="og:description"
+          content="A skilled software developer with over 3 years of experience in designing and developing innovative solutions using a range of Microsoft technologies. Proficient in agile development methodology, with a proven track record of building successful desktop and web-based applications" />
+    <meta property="og:type" content="website" />
+   
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&amp;display=swap"
+          rel="stylesheet" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async
+            src="https://www.googletagmanager.com/gtag/js?id=G-QD9ESD1D9K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-QD9ESD1D9K");
+    </script>
+    <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
+</head>
+<body>
+    <component type="typeof(App)" render-mode="ServerPrerendered" />
+
+    <div id="blazor-error-ui">
+        <environment include="Staging,Production">
+            An error has occurred. This application may no longer respond until reloaded.
+        </environment>
+        <environment include="Development">
+            An unhandled exception has occurred. See browser dev tools for details.
+        </environment>
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+    <script src="index.js"></script>
+    
+    <script src="_framework/blazor.server.js"></script>
+</body>
+</html>
