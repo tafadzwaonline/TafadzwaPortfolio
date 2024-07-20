@@ -11,15 +11,22 @@
                 current skills mostly in terms of programming and technology
             </span>
         </h2>
+        
         <div class="about__content">
             <div class="about__content-main">
                 <h3 class="about__content-title">Get to know me!</h3>
                 <div class="about__content-details">
                     <p class="about__content-details-para">
-                        I am a <strong>Full-Stack Developer</strong>  based in Zimbabwe, specializing in Web and Desktop Applications.
-                        With a background in computer science from the University of Zimbabwe and professional experience since March 2020,
-                        I have honed my skills through individual and collaborative projects. Explore some of my work in the <strong>Projects</strong> section.
+                        Welcome to my profile! I’m <strong>Tafadzwa Kahwai (@GetAge() years old)</strong> , a passionate and dedicated lead developer based in Zimbabwe, specializing in creating innovative web and desktop applications.
+                        With a BSc in Computer Science from the University of Zimbabwe, I embarked on my professional journey in March 2020 as a junior QA Analyst and junior developer. 
+                        Currently, I’m leading the development and maintenance of a pensions administration system at my workplace.
                     </p>
+                    <p class="about__content-details-para">
+                        With extensive experience in the .NET framework and a deep understanding of various technologies, I am well-equipped to bring your project to life, enhance existing features, or manage your ongoing projects effectively
+
+
+                    </p>
+                   
                     <p class="about__content-details-para">
                         I am open to job opportunities where I can contribute, learn, and grow. Connect with me on <a rel="noreferrer"
                                                                                                                       href="https://www.linkedin.com/in/tafadzwa-kahwai-b75044177/"
@@ -33,7 +40,6 @@
 
 
                     </p>
-
                 </div>
                 <a href="contact" class="btn btn--med btn--theme dynamicBgClr">Contact</a>
             </div>
@@ -46,11 +52,14 @@
                     <div class="skills__skill">React</div>
                     <div class="skills__skill">C#</div>
                     <div class="skills__skill">VB.NET</div>
-                    <div class="skills__skill">SASS</div>
+                    <div class="skills__skill">SaaS</div>
                     <div class="skills__skill">ASP.NET (Web Forms, MVC, .NET Core)</div>
+                    <div class="skills__skill">WinForms</div>
+                    <div class="skills__skill">WPF</div>
                     <div class="skills__skill">Blazor</div>
                     <div class="skills__skill">GIT</div>
                     <div class="skills__skill">Github</div>
+                    <div class="skills__skill">Web API (REST,XML-RPC)</div>
                     <div class="skills__skill">Responsive Design</div>
                     <div class="skills__skill">Bootstrap</div>
                     <div class="skills__skill">MSSQL</div>
@@ -61,3 +70,17 @@
         </div>
     </div>
 </section>
+@code {
+    private int GetAge()
+    {
+        DateTime birthDate = new DateTime(1997, 8, 18);
+        int age = DateTime.Today.Year - birthDate.Year;
+
+        if (DateTime.Today < birthDate.AddYears(age))
+        {
+            age--;
+        }
+
+        return age;
+    }
+}
