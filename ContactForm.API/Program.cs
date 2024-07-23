@@ -20,6 +20,24 @@ builder.Services.AddDbContext<AppDbContext>(Options =>
 });
 
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowBlazorClient", policy =>
+    {
+        policy.WithOrigins("http://mysystem.ddns.net/tafadzwakahwai", "https://mysystem.ddns.net/tafadzwakahwai") // Replace with your Blazor app URLs
+              .AllowAnyMethod()
+              .WithHeaders(HeaderNames.ContentType);
+    });
+});
+
+//link the projects together: client, api
+//app.UseCors(policy =>
+//{
+//    policy.WithOrigins("http://localhost:7005", "https://localhost:7005") //do not add the forward slash at end
+//    .AllowAnyMethod()
+//    .WithHeaders(HeaderNames.ContentType);
+//});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -28,14 +46,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 
-    //link the projects together: client, api
-    app.UseCors(policy =>
-    {
-        policy.WithOrigins("http://localhost:7005", "https://localhost:7005") //do not add the forward slash at end
-        .AllowAnyMethod()
-        .WithHeaders(HeaderNames.ContentType);
-    });
+   
 }
+
+//app.UseSwagger();
+//app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 

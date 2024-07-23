@@ -1,4 +1,5 @@
 ﻿using ContactForm.API.Data;
+using ContactForm.Logic.Models;
 using ContactForm.Logic.Response;
 using ContactForm.Logic.ViewModels;
 using Microsoft.AspNetCore.Http;
@@ -20,19 +21,20 @@ namespace ContactForm.API.Controllers
         [HttpPost]
         public async Task<ActionResult<ServiceResponse>> AddComment(ContactViewModels model)
         {
-            //if (model != null)
-            //{
-            //    var m = new Contact
-            //    {
-            //        Name = model.Name,
-            //        Email = model.Email,
-            //        Subject = model.Subject,
-            //        Message = model.Message
-            //    };
-            //    appDbContext.Contacts.Add(m);
-            //    await appDbContext.SaveChangesAsync();
-            //    return Ok(new ServiceResponse { Message = "Message Sent!" });
-            //}
+            if (model != null)
+            {
+                var m = new Contact
+                {
+                    Name = model.Name,
+                    Phone = model.Phone,
+                    Email = model.Email,
+                    Subject = model.Subject,
+                    Message = model.Message
+                };
+                appDbContext.Contacts.Add(m);
+                await appDbContext.SaveChangesAsync();
+                return Ok(new ServiceResponse { Message = "Message Sent!" });
+            }
             return BadRequest(new ServiceResponse { Success = false, Message = "Error Occured!" });
         }
     }
