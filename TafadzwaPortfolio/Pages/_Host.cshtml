@@ -9,17 +9,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="~/" />
-   @*  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
-    <link href="css/site.css" rel="stylesheet" />
-    <link href="TafadzwaPortfolio.styles.css" rel="stylesheet" /> *@
 
-    <link rel="icon" type="image/png" href="favicon.png"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="assets/icon/taf.ico" type="image/x-icon" />
+    <link rel="icon" href="assets/icon/taf.ico" type="image/x-icon" />
     <title>Tafadzwa Kahwai | Full-Stack Developer</title>
     <meta name="description"
           content="A skilled software developer with over 3 years of experience in designing and developing innovative solutions using a range of Microsoft technologies. Proficient in agile development methodology, with a proven track record of building successful desktop and web-based applications." />
     <meta name="author" content="Tafadzwa Kahwai" />
-    <meta name="google-site-verification"
-          content="wX2xdkxqjrC4rA2EM-9bbaVpiEEFG8ae5azgeZDd-oo" />
 
     <meta property="og:title"
           content="Tafadzwa Kahwai | Full-Stack Developer" />
@@ -28,7 +25,6 @@
     <meta property="og:description"
           content="A skilled software developer with over 3 years of experience in designing and developing innovative solutions using a range of Microsoft technologies. Proficient in agile development methodology, with a proven track record of building successful desktop and web-based applications" />
     <meta property="og:type" content="website" />
-   
 
     <link rel="stylesheet" href="css/style.css" />
 
@@ -36,18 +32,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&amp;display=swap"
           rel="stylesheet" />
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async
-            src="https://www.googletagmanager.com/gtag/js?id=G-QD9ESD1D9K"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QD9ESD1D9K"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+        function gtag() { dataLayer.push(arguments); }
         gtag("js", new Date());
-
         gtag("config", "G-QD9ESD1D9K");
     </script>
+
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
 </head>
 <body>
@@ -63,8 +57,14 @@
         <a href="" class="reload">Reload</a>
         <a class="dismiss">🗙</a>
     </div>
-    <script src="index.js"></script>
-    
+
+    <!-- Include jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Your custom JavaScript file -->
+    <script src="assets/index.js"></script>
+
     <script src="_framework/blazor.server.js"></script>
 </body>
 </html>
