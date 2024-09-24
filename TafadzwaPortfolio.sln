@@ -5,9 +5,9 @@ VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TafadzwaPortfolio", "TafadzwaPortfolio\TafadzwaPortfolio.csproj", "{9AA18E25-E997-4E0A-A743-7D061545E98E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactForm.API", "ContactForm.API\ContactForm.API.csproj", "{18AA2F77-EE97-4E03-BD5F-B895C3CD00D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactForm.API", "ContactForm.API\ContactForm.API.csproj", "{18AA2F77-EE97-4E03-BD5F-B895C3CD00D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactForm.Logic", "ContactForm.Logic\ContactForm.Logic.csproj", "{910720E1-6CAC-4C07-8650-59DF1564088C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactForm.Logic", "ContactForm.Logic\ContactForm.Logic.csproj", "{910720E1-6CAC-4C07-8650-59DF1564088C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
