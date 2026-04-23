@@ -1,0 +1,128 @@
+.managefy-preview {
+    min-height: 32rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    background: #f7f8fb;
+    border: 1px solid #e5e7eb;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+.managefy-preview--large {
+    min-height: 42rem;
+}
+
+.managefy-preview__sidebar {
+    background: #1f2937;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.managefy-preview__sidebar span {
+    display: block;
+    height: 1.2rem;
+    border-radius: 5px;
+    background: #9ca3af;
+}
+
+.managefy-preview__sidebar span:first-child {
+    height: 3.8rem;
+    width: 3.8rem;
+    background: #14b8a6;
+}
+
+.managefy-preview__main {
+    padding: 3rem;
+}
+
+.managefy-preview__topbar {
+    height: 4.2rem;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 8px 24px rgba(31, 41, 55, 0.08);
+    margin-bottom: 2.4rem;
+}
+
+.managefy-preview__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+    margin-bottom: 2.4rem;
+}
+
+.managefy-preview__stats span {
+    height: 9rem;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 8px 24px rgba(31, 41, 55, 0.08);
+    position: relative;
+}
+
+.managefy-preview__stats span::after {
+    content: '';
+    position: absolute;
+    left: 1.6rem;
+    right: 1.6rem;
+    bottom: 1.8rem;
+    height: 1rem;
+    background: #d1d5db;
+    border-radius: 5px;
+}
+
+.managefy-preview__table {
+    background: #fff;
+    border-radius: 5px;
+    padding: 2rem;
+    box-shadow: 0 8px 24px rgba(31, 41, 55, 0.08);
+}
+
+.managefy-preview__table span {
+    display: block;
+    height: 1.4rem;
+    background: #e5e7eb;
+    border-radius: 5px;
+    margin-bottom: 1.6rem;
+}
+
+.managefy-preview__table span:nth-child(2) {
+    width: 88%;
+}
+
+.managefy-preview__table span:nth-child(3) {
+    width: 76%;
+}
+
+.managefy-preview__table span:last-child {
+    width: 64%;
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .managefy-preview {
+        min-height: 24rem;
+    }
+
+    .managefy-preview--large {
+        min-height: 30rem;
+    }
+
+    .managefy-preview__main {
+        padding: 2rem;
+    }
+
+    .managefy-preview__stats {
+        grid-template-columns: 1fr;
+    }
+
+    .managefy-preview__stats span {
+        height: 5.5rem;
+    }
+
+    .managefy-preview__sidebar {
+        padding: 2rem 1.2rem;
+    }
+}
