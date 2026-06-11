@@ -1,13 +1,13 @@
 ﻿@page "/"
+@page "/index"
 @layout HeaderLayout
 
 <section class="home-hero">
     <div class="home-hero__content">
-        <h1 class="heading-primary">Hello 😁, I'm Tafadzwa Kahwai</h1>
+        <h1 class="heading-primary">Hello, I'm Tafadzwa Kahwai</h1>
         <div class="home-hero__info">
             <p class="text-primary">
-                A skilled software developer with over 3 years of experience in designing and developing innovative solutions using a range of Microsoft technologies. 
-                Proficient in agile development methodology, with a proven track record of building successful desktop and web-based applications.
+                A Systems Developer and Analyst based in Zimbabwe, building reliable web, desktop, mobile, and business applications with Microsoft technologies.
             </p>
         </div>
         <div class="home-hero__cta">
@@ -49,8 +49,8 @@
         <h2 class="heading heading-sec heading-sec__mb-med">
             <span class="heading-sec__main">About Me</span>
             <span class="heading-sec__sub">
-                Here you will find more information about me, what I do, and my
-                current skills mostly in terms of programming and technology
+                A quick introduction to who I am, what I build, and the
+                technologies I work with.
             </span>
         </h2>
         <div class="about__content">
@@ -58,12 +58,15 @@
                 <h3 class="about__content-title">Get to know me!</h3>
                 <div class="about__content-details">
                     <p class="about__content-details-para">
-                        I am a <strong>Full-Stack Developer</strong>  based in Zimbabwe, specializing in Web and Desktop Applications.
-                        With a background in computer science from the University of Zimbabwe and professional experience since March 2020, 
-                        I have honed my skills through individual and collaborative projects. Explore some of my work in the <strong>Projects</strong> section.
+                        I am a <strong>Systems Developer and Analyst</strong> based in Zimbabwe, with a BSc in Computer Science from the University of Zimbabwe and professional experience since March 2020.
+                        I build practical software for real business workflows, from web, desktop, and mobile applications to APIs, reporting, and database-driven systems.
                     </p>
                     <p class="about__content-details-para">
-                        I am open to job opportunities where I can contribute, learn, and grow. Connect with me on <a rel="noreferrer"
+                        I currently work at Comarsoft Solutions, where I lead the development and maintenance of a pensions administration system.
+                        My work covers analysis, development, testing, deployment, and ongoing support, with a focus on creating systems that are efficient, maintainable, and easy to use.
+                    </p>
+                    <p class="about__content-details-para">
+                        I am open to opportunities where I can contribute, learn, and grow. Connect with me on <a rel="noreferrer"
                                                                                                                       href="https://www.linkedin.com/in/tafadzwakahwai/"
                                                                                                                       target="_blank">Linkedin</a> or contact me on <a target="_blank"
                                                                                                                                                                        rel="noreferrer"
@@ -81,35 +84,7 @@
             </div>
             <div class="about__content-skills">
                 <h3 class="about__content-title">My Skills</h3>
-                <div class="skills">
-
-                    <div class="skills__skill">C#</div>
-                    <div class="skills__skill">VB.NET</div>
-                    <div class="skills__skill">SQL</div>
-                    <div class="skills__skill">HTML</div>
-                    <div class="skills__skill">jQuery</div>
-                    <div class="skills__skill">Bootstrap 5</div>
-                    <div class="skills__skill">CSS</div>
-                    <div class="skills__skill">JavaScript</div>
-                    <div class="skills__skill">React JS</div>
-                    <div class="skills__skill">ASP.NET Webforms</div>
-                    <div class="skills__skill">ASP.Net Core</div>
-                    <div class="skills__skill">ASP.Net MVC</div>
-                    <div class="skills__skill">Blazor</div>
-                    <div class="skills__skill">Razor Pages</div>
-                    <div class="skills__skill">LINQ</div>
-                    <div class="skills__skill">Entity Framework Core</div>
-                    <div class="skills__skill">Windows Forms</div>
-                    <div class="skills__skill">Restful API</div>
-                    <div class="skills__skill">GIT</div>
-                    <div class="skills__skill">Github</div>
-                    <div class="skills__skill">Microsoft SQL Server</div>
-                    <div class="skills__skill">MySQL</div>
-                    <div class="skills__skill">SQLite</div>
-                    <div class="skills__skill">Azure</div>
-                    <div class="skills__skill">SAP Crystal Reports</div>
-                    <div class="skills__skill">DevExpress (Reports, other components)</div>
-                </div>
+                <SkillsList />
             </div>
         </div>
     </div>
@@ -132,32 +107,17 @@
         <div class="projects__content">
             <div class="projects__row">
                 <div class="projects__row-img-cont">
-                    <div class="managefy-preview" aria-label="Managefy project preview">
-                        <div class="managefy-preview__sidebar">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <div class="managefy-preview__main">
-                            <div class="managefy-preview__topbar"></div>
-                            <div class="managefy-preview__stats">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div class="managefy-preview__table">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="project-9" class="managefy-project-link" aria-label="View Managefy case study">
+                        <img src="assets/png/managefy_login.png"
+                             alt="Managefy login screen"
+                             class="projects__row-img managefy-screenshot managefy-screenshot--login"
+                             loading="lazy" />
+                    </a>
                 </div>
                 <div class="projects__row-content">
                     <h3 class="projects__row-content-title">Managefy</h3>
                     <p class="projects__row-content-desc">
-                        Managefy is a web-based business management system used to create quotations, invoices, sale orders, purchase orders, and other business documents. It is also integrated with ZIMRA to generate fiscalised invoices, credit notes, and debit notes.
+                        Managefy is a web-based business management platform for quotations, invoices, sale orders, purchase orders, reporting, and ZIMRA fiscalisation. It also includes a secure REST API and mobile app support for quick receipt workflows.
                     </p>
                     <a class='btn btn--med btn--theme dynamicBgClr' href='project-9'>Case Study</a>
                 </div>

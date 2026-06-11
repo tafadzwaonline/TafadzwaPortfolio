@@ -1,91 +1,36 @@
-﻿@page "/contact"
+@page "/contact"
 @layout HeaderLayout
-
-@using ContactForm.Logic.Response;
-@using ContactForm.Logic.ViewModels;
-@inject HttpClient httpClient
-@inject IJSRuntime JS
 
 <section id="contact" class="contact sec-pad dynamicBg">
     <div class="main-container">
         <h2 class="heading heading-sec heading-sec__mb-med">
             <span class="heading-sec__main heading-sec__main--lt">Contact</span>
             <span class="heading-sec__sub heading-sec__sub--lt">
-                Feel free to Contact me by submitting the form below and I will get
-                back to you as soon as possible
+                You can reach me directly through any of the channels below.
             </span>
         </h2>
-        <div class="contact__form-container">
-            <EditForm Model="model" OnValidSubmit="HandleSubmit">
-                <DataAnnotationsValidator></DataAnnotationsValidator>
-                <ValidationSummary style="list-style:none;color: red; font-size: 1.5rem;"></ValidationSummary>
 
-                <div class="row">
-                    <div class="form-group col-md-6">
-                        <label class="contact__form-label" for="name">Your Name</label>
-                        <input type="text" id="name" @bind="model.Name" class="contact__form-input">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label class="contact__form-label" for="email">Your Email</label>
-                        <input type="email" id="email" class="contact__form-input" @bind="model.Email">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="contact__form-label" for="phone">Phone</label>
-                    <input type="text" id="phone" class="contact__form-input" @bind="model.Phone">
-                </div>
-                <div class="form-group">
-                    <label class="contact__form-label" for="subject">Subject</label>
-                    <input type="text" id="subject" class="contact__form-input" @bind="model.Subject">
-                </div>
-                <div class="form-group">
-                    <label class="contact__form-label" for="message">Message</label>
-                    <textarea class="contact__form-input" id="message" @bind="model.Message" rows="10"></textarea>
-                </div>
-                <div class="my-3" style="text-align: center;color: green;">
-                    @* <div class="sent-message" style="font-size: 1.5rem; margin-bottom: 1rem;">@Message</div> *@
-                    <button type="submit" class="btn btn--theme contact__btn" style="margin-top: 1rem;">Send Message</button>
-                </div>
-            </EditForm>
+        <div class="contact-details">
+            <a class="contact-details__item" href="mailto:kahwaitafadzwa@gmail.com">
+                <span class="contact-details__label">Email</span>
+                <span class="contact-details__value">kahwaitafadzwa@gmail.com</span>
+            </a>
+
+            <a class="contact-details__item" href="tel:+263784706556">
+                <span class="contact-details__label">Mobile</span>
+                <span class="contact-details__value">+263 784 706 556</span>
+            </a>
+
+            <a class="contact-details__item" href="https://api.whatsapp.com/send?phone=263784706556" target="_blank" rel="noreferrer">
+                <span class="contact-details__label">WhatsApp</span>
+                <span class="contact-details__value">Chat on WhatsApp</span>
+            </a>
+
+            <a class="contact-details__item" href="https://www.linkedin.com/in/tafadzwakahwai/" target="_blank" rel="noreferrer">
+                <span class="contact-details__label">LinkedIn</span>
+                <span class="contact-details__value">linkedin.com/in/tafadzwakahwai</span>
+            </a>
+
         </div>
     </div>
 </section>
-
-@code {
-    string Message = "";
-    ContactViewModels model = new();
-
-    async Task HandleSubmit()
-    {
-        httpClient.BaseAddress = new Uri("https://mysystem.ddns.net/ContactFormAPI/");
-
-        var result = await httpClient.PostAsJsonAsync("api/Enquiries", model);
-        var response = await result.Content.ReadFromJsonAsync<ServiceResponse>();
-
-        Message = response?.Message ?? "No response message received";
-
-        await ShowSweetAlertAsync(Message);
-
-        ResetForm();
-    }
-
-    async Task ShowSweetAlertAsync(string message)
-    {
-        await JS.InvokeVoidAsync("Swal.fire", new
-        {
-            title = "Operation Status",
-            text = message,
-            icon = message.Contains("Sent") ? "success" : "error",
-            confirmButtonText = "OK"
-        });
-    }
-
-    void ResetForm()
-    {
-        model.Name = "";
-        model.Phone = "";
-        model.Email = "";
-        model.Subject = "";
-        model.Message = "";
-    }
-}

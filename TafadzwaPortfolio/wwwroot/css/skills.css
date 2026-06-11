@@ -1,0 +1,38 @@
+.skills--grouped {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+}
+
+.skills__group {
+    min-width: 0;
+}
+
+.skills__group-title {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 1.2rem;
+}
+
+.skills__items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .skills--grouped {
+        gap: 2rem;
+    }
+
+    .skills__group-title {
+        font-size: 1.6rem;
+    }
+
+    .skills__skill {
+        font-size: 1.5rem;
+        padding: .9rem 1.5rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+    }
+}
